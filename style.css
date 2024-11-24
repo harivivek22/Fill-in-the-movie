@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#timer, #score {
+    font-size: 2em;
+    margin: 5px;
+}
+
+#movieTitle {
+    font-size: 3em;
+    letter-spacing: 10px;
+    margin: 20px;
+}
+
+#guessInput {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.5em;
+    width: 300px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#feedback {
+    color: red;
+    font-size: 1.2em;
+    height: 20px;
+    margin: 10px;
+}
+
+#clues {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+#leaderboard {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#leaderboardList {
+    font-size: 1.2em;
+    margin: 20px;
+}
+
+#congratulationsPage {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#usernameForm {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+#usernameForm input {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#finalScore {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4CAF50;
+}

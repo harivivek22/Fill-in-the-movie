@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finish the Movie Title Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="page1" class="page">
+        <h1>Finish the Movie Title</h1>
+        <button id="startButton">Start</button>
+    </div>
+
+    <div id="page2" class="page" style="display:none;">
+        <div id="timer">15 Sec</div>
+        <div id="score">1000 Pts</div>
+        <div id="movieTitle">-----</div>
+        <input type="text" id="guessInput" placeholder="Enter Text here">
+        <button id="submitGuess">Submit</button>
+        <button id="clueButton">Clue</button>
+        <div id="feedback"></div>
+        <div id="clues"></div>
+    </div>
+
+    <div id="leaderboard" class="page" style="display:none;">
+        <h2>Top 5 Scores</h2>
+        <div id="leaderboardList"></div>
+    </div>
+
+    <div id="congratulationsPage" class="page" style="display:none;">
+        <h2>Congratulations!</h2>
+        <p id="finalScore"></p>
+        <p id="movieTitleDisplay"></p> <!-- Add this element to show the movie title -->
+        <form id="usernameForm">
+            <input type="text" id="username" placeholder="Enter your Twitter/X username" required>
+            <button type="submit">Submit Score</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
