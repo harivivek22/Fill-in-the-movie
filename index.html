@@ -10,9 +10,20 @@
 <body>
     <div id="page1" class="page">
         <h1>Finish the Movie Title</h1>
+        <div id="instructions" class="instructions">
+            Finish the movie name by guessing one letter at a time 
+            <br> or by trying to match the whole title.
+            <br>
+            You got 60 seconds!
+        </div>
         <button id="startButton">Start</button>
     </div>
-
+    <div style="position: absolute; top: 10px; left: 10px;">
+        <img src="incognito.png" alt="Logo 1" style="height: 90px;">
+    </div>
+    <div style="position: absolute; top: 10px; right: 10px;">
+        <img src="m logo.png" alt="Logo 2" style="height: 60px;">
+    </div>
     <div id="page2" class="page" style="display:none;">
         <div id="timer">15 Sec</div>
         <div id="score">1000 Pts</div>
@@ -38,6 +49,20 @@
             <button type="submit">Submit Score</button>
         </form>
     </div>
+
+    <div style="text-align: center; margin-top: 20px; font-size: 14px;">
+
+        <!-- Branding Section -->
+        <footer class="branding-section">
+            <!-- PNG Image -->
+            <img src="memesko.png" alt="Branding Image" style="height: 30px;">
+
+            <!-- Branding Text -->
+            <p class="branding-text">
+                Checkout Telugu Meme Card Game 
+                <a href="https://www.memesko.com/" target="_blank" class="branding-link">Memesko</a>
+            </p>
+        </footer>
 
     <script src="script.js"></script>
 </body>

@@ -19,7 +19,7 @@ function loadRandomMovie() {
             const monthIndex = headers.indexOf('month');
             const dateIndex = headers.indexOf('date');
             const titleIndex = headers.indexOf('title');
-            const castIndex = headers.indexOf('cast');
+            const directorIndex = headers.indexOf('director');
             const yearIndex = headers.indexOf('year');
 
             // Check if all required columns exist
@@ -27,8 +27,7 @@ function loadRandomMovie() {
                 monthIndex === -1 ||
                 dateIndex === -1 ||
                 titleIndex === -1 ||
-                castIndex === -1 ||
-                yearIndex === -1
+                directorIndex === -1
             ) {
                 console.error("CSV does not have the required columns.");
                 return;
@@ -40,8 +39,8 @@ function loadRandomMovie() {
 
                 return {
                     title: columns[titleIndex]?.trim(),
-                    releaseDate: `${capitalizeFirstLetter(columns[monthIndex]?.trim())} ${columns[dateIndex]?.trim()}, ${columns[yearIndex]?.trim()}`,
-                    cast: columns[castIndex]?.trim()
+                    releaseDate: `${capitalizeFirstLetter(columns[monthIndex]?.trim())} ${columns[dateIndex]?.trim()}${columns[yearIndex]?.trim() ? `, ${columns[yearIndex]?.trim()}` : ''}`,
+                    director: columns[directorIndex]?.trim()
                 };
             }).filter(movie => movie.title); // Filter out invalid rows
 
@@ -50,9 +49,9 @@ function loadRandomMovie() {
 
             // Set global variables for the game
             movieTitle = randomMovie.title;
-            displayedTitle = "-".repeat(movieTitle.length);
+            displayedTitle = updateDisplayedTitle(movieTitle); // Reveal spaces from the beginning
             clue1 = `Release Date: ${randomMovie.releaseDate}`;
-            clue2 = `Starring: ${randomMovie.cast}`;
+            clue2 = `Directed by: ${randomMovie.director}`;
 
             // Enable start button once movie is loaded
             document.getElementById('startButton').disabled = false;
@@ -62,6 +61,10 @@ function loadRandomMovie() {
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function updateDisplayedTitle(title) {
+    return title.split('').map(char => (char === ' ' ? ' ' : '-')).join('');
 }
 
 window.onload = function() {

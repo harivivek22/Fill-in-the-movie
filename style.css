@@ -99,3 +99,27 @@ button:hover {
     font-weight: bold;
     color: #4CAF50;
 }
+
+.branding-section {
+    text-align: center;
+    margin-top: 10px; /* Adjust this value to bring it higher */
+    position: relative; /* Ensure it doesn't overlap other content */
+}
+
+.branding-image {
+    height: 50px; /* Adjust height as needed */
+    margin-bottom: 10px; /* Add spacing between the image and text */
+}
+
+.branding-text {
+    font-size: 14px;
+}
+
+.branding-link {
+    color: #54CACEC; /* Yellow color for the link */
+    text-decoration: none;
+}
+
+.branding-link:hover {
+    text-decoration: underline; /* Optional hover effect */
+}
